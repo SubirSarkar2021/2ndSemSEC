@@ -1,0 +1,110 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "1f047a87-9c53-44ba-b677-0c61c3866b07",
+   "metadata": {},
+   "source": [
+    "# Fibonacci numbers\n",
+    "The Fibonacci numbers are the sequence of integers in which each is the sum of the previous two, with the first two numbers being 1, 1. Thus the first few members of the sequence are 1, 1, 2, 3, 5, 8, 13, 21.\n",
+    "\n",
+    "Calculate Fibonacci numbers up to 100."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "adc95f55-5db9-47da-8d73-1e06e5aed771",
+   "metadata": {},
+   "source": [
+    "# Algorithm: Fibonacci Sequence Generation\n",
+    "\n",
+    "## Step 1: Initialize Variables\n",
+    "- Set `f1 = 1` (First Fibonacci number).\n",
+    "- Set `f2 = 1` (Second Fibonacci number).\n",
+    "- Set `n = 1` (Counter variable).\n",
+    "\n",
+    "## Step 2: Loop until `n` reaches 10\n",
+    "- While `n <= 10`, do the following:\n",
+    "\n",
+    "  1. **Print the current Fibonacci number** (`f1`).\n",
+    "  2. **Update Fibonacci values**:\n",
+    "     - Assign `f2` to `f1` (shift `f1` to the next Fibonacci number).\n",
+    "     - Compute `f1 + f2` and assign it to `f2` (generate the next Fibonacci number).\n",
+    "  3. **Increment `n` by 1**.\n",
+    "\n",
+    "## Step 3: End of Loop\n",
+    "- The program stops after printing 10 Fibonacci numbers.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "887bd46a-38f9-42ba-bf98-8c89e39c2a6e",
+   "metadata": {},
+   "source": [
+    "```mermaid\n",
+    "graph TD;\n",
+    "    A[Start] --> B[Initialize f1 = 1, f2 = 1, n = 1]\n",
+    "    B --> C{n <= 10?}\n",
+    "    C -- Yes --> D[Print f1]\n",
+    "    D --> E[Update f1 = f2]\n",
+    "    E --> F[Update f2 = f1 + f2]\n",
+    "    F --> G[Increment n by 1]\n",
+    "    G --> C\n",
+    "    C -- No --> H[End]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "abb6321c-e36f-4858-b06d-1e9f4e2ebda3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "8\n",
+      "13\n",
+      "21\n",
+      "34\n",
+      "55\n",
+      "89\n"
+     ]
+    }
+   ],
+   "source": [
+    "f1, f2 = 1, 1\n",
+    "n = 1\n",
+    "while n <=10:\n",
+    "    f1, f2 = f2, f1 + f2\n",
+    "    print(f1)\n",
+    "    n += 1"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

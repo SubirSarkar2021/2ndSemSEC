@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projectile Motion &mdash; 2nd Sem Skill Enhancement of Physics  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+    <link rel="canonical" href="https://SubirSarkar2021.github.io/4SemCoreLabManual/Notebook/8Projectile.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Algorithm: Plot a Parametric Curve" href="9Plot.html" />
+    <link rel="prev" title="Transformation of Coordinates" href="7TransformationCoordinate.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            2nd Sem Skill Enhancement of Physics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1CheckPrime.html">Prime Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html#Algorithm:-Fibonacci-Sequence-Generation">Algorithm: Fibonacci Sequence Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3SumMatrices.html">Sum of Two Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html">Sum of a series of numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html#Algorithm:-Sum-of-Harmonic-Series-(1-+-1/2-+-1/3-+-...-+-1/100)">Algorithm: Sum of Harmonic Series (1 + 1/2 + 1/3 + … + 1/100)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html">Sine Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Algorithm-to-Compute-sin(x)-Using-a-Series">Algorithm to Compute sin(x) Using a Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7TransformationCoordinate.html">Transformation of Coordinates</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Projectile Motion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Algorithm:-Trajectory-of-a-Projectile-Thrown-at-an-Angle">Algorithm: Trajectory of a Projectile Thrown at an Angle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Step-1:-Define-Input-Parameters">Step 1: Define Input Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Step-2:-Compute-Motion-Components">Step 2: Compute Motion Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Step-3:-Compute-Position-Over-Time">Step 3: Compute Position Over Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Step-4:-Display-Results">Step 4: Display Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Algorithm-for-Projectile-Motion-(Vectorized-Approach)">Algorithm for Projectile Motion (Vectorized Approach)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1"><strong>Step 1: Define Input Parameters</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Step-2:-Convert-Angle-to-Radians"><strong>Step 2: Convert Angle to Radians</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Step-3:-Compute-Initial-Velocity-Components"><strong>Step 3: Compute Initial Velocity Components</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Step-4:-Compute-Time-of-Flight"><strong>Step 4: Compute Time of Flight</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Step-5:-Compute-Position-Using-Vectorized-Equations"><strong>Step 5: Compute Position Using Vectorized Equations</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Step-6:-Plot-the-Trajectory"><strong>Step 6: Plot the Trajectory</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9Plot.html">Algorithm: Plot a Parametric Curve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9Plot.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Lissajous.html">Lissajous Figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Lissajous.html#Algorithm-for-Generating-Lissajous-Figure">Algorithm for Generating Lissajous Figure</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">2nd Sem Skill Enhancement of Physics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Projectile Motion</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Notebook/8Projectile.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<section id="Projectile-Motion">
+<h1>Projectile Motion<a class="headerlink" href="#Projectile-Motion" title="Link to this heading"></a></h1>
+<p>If a particle is projected making an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the ground and with a velocity <span class="math notranslate nohighlight">\(v_0\)</span>, then, the trajectory of the projectile at any instant of time <span class="math notranslate nohighlight">\(t\)</span> is given by <span class="math">\begin{align}
+&x = v_x * t \\
+&y = v_y * t - \frac{1}{2} * g * t^2
+\end{align}</span> where, <span class="math">\begin{align}
+&v_x = v_0 * \cos \theta \\
+&v_x = v_0 * \sin \theta
+\end{align}</span> <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity.</p>
+<section id="Algorithm:-Trajectory-of-a-Projectile-Thrown-at-an-Angle">
+<h2>Algorithm: Trajectory of a Projectile Thrown at an Angle<a class="headerlink" href="#Algorithm:-Trajectory-of-a-Projectile-Thrown-at-an-Angle" title="Link to this heading"></a></h2>
+<section id="Step-1:-Define-Input-Parameters">
+<h3>Step 1: Define Input Parameters<a class="headerlink" href="#Step-1:-Define-Input-Parameters" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Input:</p>
+<ul class="simple">
+<li><p>Initial velocity (v0)</p></li>
+<li><p>Angle of projection (θ)</p></li>
+<li><p>Acceleration due to gravity (g)</p></li>
+<li><p>Time interval for calculations</p></li>
+</ul>
+</li>
+</ol>
+<section id="Step-2:-Compute-Motion-Components">
+<h4>Step 2: Compute Motion Components<a class="headerlink" href="#Step-2:-Compute-Motion-Components" title="Link to this heading"></a></h4>
+<ol class="arabic simple" start="2">
+<li><p>Compute initial horizontal and vertical velocity components:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vx</span> <span class="pre">=</span> <span class="pre">v0</span> <span class="pre">*</span> <span class="pre">cos(θ)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vy</span> <span class="pre">=</span> <span class="pre">v0</span> <span class="pre">*</span> <span class="pre">sin(θ)</span></code></p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="Step-3:-Compute-Position-Over-Time">
+<h4>Step 3: Compute Position Over Time<a class="headerlink" href="#Step-3:-Compute-Position-Over-Time" title="Link to this heading"></a></h4>
+<ol class="arabic simple" start="3">
+<li><p>Iterate over time (t):</p>
+<ul class="simple">
+<li><p>Compute horizontal position: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">vx</span> <span class="pre">*</span> <span class="pre">t</span></code></p></li>
+<li><p>Compute vertical position: <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">vy</span> <span class="pre">*</span> <span class="pre">t</span> <span class="pre">-</span> <span class="pre">(1/2)</span> <span class="pre">*</span> <span class="pre">g</span> <span class="pre">*</span> <span class="pre">t^2</span></code></p></li>
+<li><p>Stop when <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> (projectile hits the ground)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="Step-4:-Display-Results">
+<h4>Step 4: Display Results<a class="headerlink" href="#Step-4:-Display-Results" title="Link to this heading"></a></h4>
+<ol class="arabic simple" start="4">
+<li><p>Store the calculated positions.</p></li>
+<li><p>Plot <code class="docutils literal notranslate"><span class="pre">y</span></code> vs <code class="docutils literal notranslate"><span class="pre">x</span></code> to visualize the projectile’s trajectory.</p></li>
+</ol>
+<p>```mermaid graph TD; A[Start] –&gt; B[Define input parameters: v0, θ, g, time interval]; B –&gt; C[Compute vx = v0 * cos θ, vy = v0 * sinθ]; C –&gt; D[Initialize time t = 0]; D –&gt; E[Loop: While y &gt;= 0]; E –&gt; F[Compute x = vx * t]; F –&gt; G[Compute y = vy * t - 1/2 * g * t^2]; G –&gt; H[Store x, y values]; H –&gt; I[Increment time t]; I –&gt; E; E – No –&gt; J[Plot trajectory y vs x]; J –&gt; K[End];</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Input parameter</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">theta_deg</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">theta_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta_deg</span><span class="p">)</span>
+
+<span class="c1"># Discretizing &#39;time&#39;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Function to compute projectile motion</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">projectile_motion</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mf">9.81</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+    <span class="n">theta_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>  <span class="c1"># Convert angle to radians</span>
+    <span class="n">vx</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_rad</span><span class="p">)</span>  <span class="c1"># Horizontal velocity</span>
+    <span class="n">vy</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_rad</span><span class="p">)</span>  <span class="c1"># Vertical velocity</span>
+
+    <span class="c1"># Initialize lists to store trajectory points</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Start time</span>
+    <span class="k">while</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Run until projectile hits the ground</span>
+        <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">vx</span> <span class="o">*</span> <span class="n">t</span>
+        <span class="n">y_new</span> <span class="o">=</span> <span class="n">vy</span> <span class="o">*</span> <span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">y_new</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Stop when projectile hits the ground</span>
+            <span class="k">break</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y_new</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="c1"># Inputs: Initial velocity and launch angle</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Initial speed in m/s</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">45</span>  <span class="c1"># Launch angle in degrees</span>
+
+<span class="c1"># Get trajectory points</span>
+<span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span> <span class="o">=</span> <span class="n">projectile_motion</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># Plot the trajectory</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;v0=</span><span class="si">{</span><span class="n">v0</span><span class="si">}</span><span class="s2"> m/s, θ=</span><span class="si">{</span><span class="n">theta</span><span class="si">}</span><span class="s2">°&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Horizontal Distance (m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Vertical Distance (m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Projectile Motion Trajectory&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Notebook_8Projectile_5_0.png" src="../_images/Notebook_8Projectile_5_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="Algorithm-for-Projectile-Motion-(Vectorized-Approach)">
+<h1>Algorithm for Projectile Motion (Vectorized Approach)<a class="headerlink" href="#Algorithm-for-Projectile-Motion-(Vectorized-Approach)" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2><strong>Step 1: Define Input Parameters</strong><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Take initial velocity $ v_0 $ (m/s).</p></li>
+<li><p>Take launch angle $ :nbsphinx-math:<a href="#id2"><span class="problematic" id="id3">`</span></a>theta <a href="#id4"><span class="problematic" id="id5">`</span></a>$ (degrees).</p></li>
+<li><p>Define gravitational acceleration $ g = 9.81 $ m/s².</p></li>
+<li><p>Set a small time step $ dt $ for accurate calculations.</p></li>
+</ul>
+</section>
+<section id="Step-2:-Convert-Angle-to-Radians">
+<h2><strong>Step 2: Convert Angle to Radians</strong><a class="headerlink" href="#Step-2:-Convert-Angle-to-Radians" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Compute $ :nbsphinx-math:<a href="#id6"><span class="problematic" id="id7">`</span></a>theta <a href="#id8"><span class="problematic" id="id9">`</span></a>$ in radians using:</p>
+<div class="math notranslate nohighlight">
+\[\theta_{\text{rad}} = \frac{\pi}{180} \times \theta\]</div>
+</li>
+</ul>
+</section>
+<section id="Step-3:-Compute-Initial-Velocity-Components">
+<h2><strong>Step 3: Compute Initial Velocity Components</strong><a class="headerlink" href="#Step-3:-Compute-Initial-Velocity-Components" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Horizontal velocity:</p>
+<div class="math notranslate nohighlight">
+\[v_x = v_0 \cos(\theta_{\text{rad}})\]</div>
+</li>
+<li><p>Vertical velocity:</p>
+<div class="math notranslate nohighlight">
+\[v_y = v_0 \sin(\theta_{\text{rad}})\]</div>
+</li>
+</ul>
+</section>
+<section id="Step-4:-Compute-Time-of-Flight">
+<h2><strong>Step 4: Compute Time of Flight</strong><a class="headerlink" href="#Step-4:-Compute-Time-of-Flight" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Total time of flight:</p>
+<div class="math notranslate nohighlight">
+\[t_{\text{flight}} = \frac{2 v_y}{g}\]</div>
+</li>
+<li><p>Create a <strong>NumPy time array</strong> from 0 to $ t_{<span class="math">\text{flight}</span>} $ with step $ dt $.</p></li>
+</ul>
+</section>
+<section id="Step-5:-Compute-Position-Using-Vectorized-Equations">
+<h2><strong>Step 5: Compute Position Using Vectorized Equations</strong><a class="headerlink" href="#Step-5:-Compute-Position-Using-Vectorized-Equations" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Horizontal position for all time steps:</p>
+<div class="math notranslate nohighlight">
+\[x = v_x \times t\]</div>
+</li>
+<li><p>Vertical position for all time steps:</p>
+<div class="math notranslate nohighlight">
+\[y = v_y \times t - \frac{1}{2} g t^2\]</div>
+</li>
+</ul>
+</section>
+<section id="Step-6:-Plot-the-Trajectory">
+<h2><strong>Step 6: Plot the Trajectory</strong><a class="headerlink" href="#Step-6:-Plot-the-Trajectory" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use Matplotlib to plot $ x $ vs. $ y $.</p></li>
+<li><p>Label axes and add a title.</p></li>
+<li><p>Display the plot.</p></li>
+</ul>
+<p>This approach ensures fast execution without loops by leveraging <strong>NumPy’s vectorized operations</strong>. 🚀</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD;
+    A[Start] --&gt; B[Define Input Parameters: v0, angle, g, dt];
+    B --&gt; C[Convert angle to radians];
+    C --&gt; D[Compute Initial Velocity Components: vx, vy];
+    D --&gt; E[Compute Time of Flight: t_flight];
+    E --&gt; F[Create NumPy time array from 0 to t_flight];
+    F --&gt; G[Compute x positions: x = vx * t];
+    G --&gt; H[Compute y positions: y = vy * t - 0.5 * g * t^2];
+    H --&gt; I[Plot trajectory using Matplotlib];
+    I --&gt; J[Display the plot];
+    J --&gt; K[End];
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Function to compute projectile motion using NumPy vectorization</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">projectile_motion_vectorized</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mf">9.81</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+    <span class="n">theta_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>  <span class="c1"># Convert angle to radians</span>
+    <span class="n">vx</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_rad</span><span class="p">)</span>  <span class="c1"># Horizontal velocity component</span>
+    <span class="n">vy</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_rad</span><span class="p">)</span>  <span class="c1"># Vertical velocity component</span>
+
+    <span class="c1"># Time of flight = (2 * vy) / g</span>
+    <span class="n">t_flight</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">vy</span><span class="p">)</span> <span class="o">/</span> <span class="n">g</span>
+
+    <span class="c1"># Create time array from 0 to total flight time with step dt</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">t_flight</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+
+    <span class="c1"># Compute x and y positions using vectorized operations</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">vx</span> <span class="o">*</span> <span class="n">t</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">vy</span> <span class="o">*</span> <span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="c1"># Inputs: Initial velocity and launch angle</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Initial speed in m/s</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">45</span>  <span class="c1"># Launch angle in degrees</span>
+
+<span class="c1"># Compute trajectory using vectorized function</span>
+<span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span> <span class="o">=</span> <span class="n">projectile_motion_vectorized</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># Plot the trajectory</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;v0=</span><span class="si">{</span><span class="n">v0</span><span class="si">}</span><span class="s2"> m/s, θ=</span><span class="si">{</span><span class="n">theta</span><span class="si">}</span><span class="s2">°&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Horizontal Distance (m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Vertical Distance (m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Projectile Motion Trajectory (Vectorized)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Notebook_8Projectile_8_0.png" src="../_images/Notebook_8Projectile_8_0.png" />
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="7TransformationCoordinate.html" class="btn btn-neutral float-left" title="Transformation of Coordinates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="9Plot.html" class="btn btn-neutral float-right" title="Algorithm: Plot a Parametric Curve" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dr. Subir Sarkar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

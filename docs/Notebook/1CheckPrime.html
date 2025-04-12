@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime Number &mdash; 2nd Sem Skill Enhancement of Physics  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+    <link rel="canonical" href="https://SubirSarkar2021.github.io/4SemCoreLabManual/Notebook/1CheckPrime.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Fibonacci numbers" href="2Fibonacci.html" />
+    <link rel="prev" title="2nd Sem Skill Enhancement Course documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            2nd Sem Skill Enhancement of Physics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prime Number</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Finding-Prime-Numbers-in-a-Given-Range"><strong>Finding Prime Numbers in a Given Range</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Algorithm"><strong>Algorithm</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Step-1:-Define-a-Function-to-Check-if-a-Number-is-Prime"><strong>Step 1: Define a Function to Check if a Number is Prime</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Step-2:-Define-a-Function-to-Find-Primes-in-a-Range"><strong>Step 2: Define a Function to Find Primes in a Range</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Step-3:-Call-the-Function-with-Example-Values"><strong>Step 3: Call the Function with Example Values</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html#Algorithm:-Fibonacci-Sequence-Generation">Algorithm: Fibonacci Sequence Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3SumMatrices.html">Sum of Two Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html">Sum of a series of numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html#Algorithm:-Sum-of-Harmonic-Series-(1-+-1/2-+-1/3-+-...-+-1/100)">Algorithm: Sum of Harmonic Series (1 + 1/2 + 1/3 + … + 1/100)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html">Sine Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Algorithm-to-Compute-sin(x)-Using-a-Series">Algorithm to Compute sin(x) Using a Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7TransformationCoordinate.html">Transformation of Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Projectile.html#Algorithm-for-Projectile-Motion-(Vectorized-Approach)">Algorithm for Projectile Motion (Vectorized Approach)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9Plot.html">Algorithm: Plot a Parametric Curve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9Plot.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Lissajous.html">Lissajous Figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Lissajous.html#Algorithm-for-Generating-Lissajous-Figure">Algorithm for Generating Lissajous Figure</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">2nd Sem Skill Enhancement of Physics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Prime Number</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Notebook/1CheckPrime.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Prime-Number">
+<h1>Prime Number<a class="headerlink" href="#Prime-Number" title="Link to this heading"></a></h1>
+<p>A number which is divisible by 1 and the number itself is called a <strong>prime number</strong>.</p>
+<section id="Finding-Prime-Numbers-in-a-Given-Range">
+<h2><strong>Finding Prime Numbers in a Given Range</strong><a class="headerlink" href="#Finding-Prime-Numbers-in-a-Given-Range" title="Link to this heading"></a></h2>
+</section>
+<section id="Algorithm">
+<h2><strong>Algorithm</strong><a class="headerlink" href="#Algorithm" title="Link to this heading"></a></h2>
+<section id="Step-1:-Define-a-Function-to-Check-if-a-Number-is-Prime">
+<h3><strong>Step 1: Define a Function to Check if a Number is Prime</strong><a class="headerlink" href="#Step-1:-Define-a-Function-to-Check-if-a-Number-is-Prime" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Input</strong>: An integer ( n ).</p></li>
+<li><p><strong>Check</strong>: If ( n &lt; 2 ), return <strong>False</strong> (since numbers less than 2 are not prime).</p></li>
+<li><p><strong>Loop</strong>: Iterate ( i ) from <strong>2</strong> to ( <span class="math">\sqrt{n}</span> ) (inclusive).</p>
+<ul class="simple">
+<li><p>If ( n ) is <strong>divisible</strong> by ( i ), return <strong>False</strong> (not prime).</p></li>
+</ul>
+</li>
+<li><p>If no divisors are found, return <strong>True</strong> (prime number).</p></li>
+</ol>
+</section>
+<section id="Step-2:-Define-a-Function-to-Find-Primes-in-a-Range">
+<h3><strong>Step 2: Define a Function to Find Primes in a Range</strong><a class="headerlink" href="#Step-2:-Define-a-Function-to-Find-Primes-in-a-Range" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Input</strong>: Two integers ( a ) and ( b ).</p></li>
+<li><p><strong>Initialize</strong>: An empty list to store prime numbers.</p></li>
+<li><p><strong>Loop</strong>: Iterate ( n ) from ( a ) to ( b ) (inclusive).</p>
+<ul class="simple">
+<li><p>If ( n ) is prime (using the <code class="docutils literal notranslate"><span class="pre">is_prime(n)</span></code> function), add it to the list.</p></li>
+</ul>
+</li>
+<li><p><strong>Return</strong> the list of prime numbers.</p></li>
+</ol>
+</section>
+<section id="Step-3:-Call-the-Function-with-Example-Values">
+<h3><strong>Step 3: Call the Function with Example Values</strong><a class="headerlink" href="#Step-3:-Call-the-Function-with-Example-Values" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Define the range ( a = 2 ), ( b = 10 ).</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">find_primes(a,</span> <span class="pre">b)</span></code>.</p></li>
+<li><p>Print the list of prime numbers found in the given range.</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">find_primes</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">primes</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prime numbers between </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">find_primes</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Prime numbers between 2 and 10: [2, 3, 5, 7]
+</pre></div></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="2nd Sem Skill Enhancement Course documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2Fibonacci.html" class="btn btn-neutral float-right" title="Fibonacci numbers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dr. Subir Sarkar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

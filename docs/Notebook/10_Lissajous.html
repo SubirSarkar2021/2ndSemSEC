@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lissajous Figure &mdash; 2nd Sem Skill Enhancement of Physics  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+    <link rel="canonical" href="https://SubirSarkar2021.github.io/4SemCoreLabManual/Notebook/10_Lissajous.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Algorithm: Plot a Parametric Curve" href="9Plot.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            2nd Sem Skill Enhancement of Physics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1CheckPrime.html">Prime Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html#Algorithm:-Fibonacci-Sequence-Generation">Algorithm: Fibonacci Sequence Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3SumMatrices.html">Sum of Two Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html">Sum of a series of numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html#Algorithm:-Sum-of-Harmonic-Series-(1-+-1/2-+-1/3-+-...-+-1/100)">Algorithm: Sum of Harmonic Series (1 + 1/2 + 1/3 + … + 1/100)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html">Sine Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Algorithm-to-Compute-sin(x)-Using-a-Series">Algorithm to Compute sin(x) Using a Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7TransformationCoordinate.html">Transformation of Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Projectile.html#Algorithm-for-Projectile-Motion-(Vectorized-Approach)">Algorithm for Projectile Motion (Vectorized Approach)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9Plot.html">Algorithm: Plot a Parametric Curve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9Plot.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lissajous Figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Algorithm-for-Generating-Lissajous-Figure">Algorithm for Generating Lissajous Figure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Steps:">Steps:</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">2nd Sem Skill Enhancement of Physics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lissajous Figure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Notebook/10_Lissajous.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Lissajous-Figure">
+<h1>Lissajous Figure<a class="headerlink" href="#Lissajous-Figure" title="Link to this heading"></a></h1>
+<p>Consider two simple harmonic motions represented as <span class="math">\begin{align}
+& y_1 = a_1 \sin\theta\\
+& y_2 = a_2 \sin(\theta + \delta)
+\end{align}</span></p>
+<p>where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> are amplitudes,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta\)</span> is the phase difference which can take some fixed values, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta\)</span> is a continuous variable from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(2\pi\)</span>.</p></li>
+</ul>
+<p>We want to study the relationship between two motions by plotting <span class="math notranslate nohighlight">\(y_2\)</span> against <span class="math notranslate nohighlight">\(y_1\)</span>.</p>
+</section>
+<section id="Algorithm-for-Generating-Lissajous-Figure">
+<h1>Algorithm for Generating Lissajous Figure<a class="headerlink" href="#Algorithm-for-Generating-Lissajous-Figure" title="Link to this heading"></a></h1>
+<section id="Steps:">
+<h2>Steps:<a class="headerlink" href="#Steps:" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Define Function ``f(a1, a2, delta)``:</strong></p>
+<ul class="simple">
+<li><p>Generate 100 values for <code class="docutils literal notranslate"><span class="pre">theta</span></code> in the range <span class="math notranslate nohighlight">\([0, 2\pi]\)</span>.</p></li>
+<li><p>Compute <code class="docutils literal notranslate"><span class="pre">y1</span></code> as $ a1 <span class="math">\cdot `:nbsphinx-math:</span>sin`(<span class="math">\theta</span>) $.</p></li>
+<li><p>Compute <code class="docutils literal notranslate"><span class="pre">y2</span></code> as $ a2 <span class="math">\cdot `:nbsphinx-math:</span>sin`(<span class="math">\theta `+ :nbsphinx-math:</span>text{radians}`(<span class="math">\delta</span>)) $.</p></li>
+<li><p>Return <code class="docutils literal notranslate"><span class="pre">y1</span></code> and <code class="docutils literal notranslate"><span class="pre">y2</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Initialize Variables:</strong></p>
+<ul class="simple">
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">a1</span> <span class="pre">=</span> <span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">a2</span> <span class="pre">=</span> <span class="pre">1</span></code>, and <code class="docutils literal notranslate"><span class="pre">delta</span> <span class="pre">=</span> <span class="pre">90</span></code>.</p></li>
+<li><p>Call function <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">a2,</span> <span class="pre">delta)</span></code> to obtain <code class="docutils literal notranslate"><span class="pre">y1</span></code> and <code class="docutils literal notranslate"><span class="pre">y2</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Plot Lissajous Figure:</strong></p>
+<ul class="simple">
+<li><p>Create a figure of size (5 <span class="math">\times 5</span>).</p></li>
+<li><p>Plot <code class="docutils literal notranslate"><span class="pre">y1</span></code> vs. <code class="docutils literal notranslate"><span class="pre">y2</span></code> using a red dashed line (<code class="docutils literal notranslate"><span class="pre">'r-'</span></code>).</p></li>
+<li><p>Set x-axis limits to <code class="docutils literal notranslate"><span class="pre">[-2,</span> <span class="pre">2]</span></code> and y-axis limits to <code class="docutils literal notranslate"><span class="pre">[-2,</span> <span class="pre">2]</span></code>.</p></li>
+<li><p>Label axes with <code class="docutils literal notranslate"><span class="pre">&quot;$y_1$&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;$y_2$&quot;</span></code>, using LaTeX-style notation.</p></li>
+<li><p>Set title as <code class="docutils literal notranslate"><span class="pre">&quot;Lissajous</span> <span class="pre">Figure&quot;</span></code>.</p></li>
+<li><p>Add grid and legend.</p></li>
+<li><p>Display the plot.</p></li>
+</ul>
+</li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">delta</span><span class="p">):</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">a1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="n">a2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span>
+
+<span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">delta</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">90</span>
+<span class="n">y1</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">delta$ = </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span><span class="si">}</span><span class="s2">$^</span><span class="se">\\</span><span class="s2">circ$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$y_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lissajous Figure&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Notebook_10_Lissajous_3_0.png" src="../_images/Notebook_10_Lissajous_3_0.png" />
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="9Plot.html" class="btn btn-neutral float-left" title="Algorithm: Plot a Parametric Curve" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dr. Subir Sarkar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithm: Plot a Parametric Curve &mdash; 2nd Sem Skill Enhancement of Physics  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+    <link rel="canonical" href="https://SubirSarkar2021.github.io/4SemCoreLabManual/Notebook/9Plot.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lissajous Figure" href="10_Lissajous.html" />
+    <link rel="prev" title="Projectile Motion" href="8Projectile.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            2nd Sem Skill Enhancement of Physics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1CheckPrime.html">Prime Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2Fibonacci.html#Algorithm:-Fibonacci-Sequence-Generation">Algorithm: Fibonacci Sequence Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3SumMatrices.html">Sum of Two Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html">Sum of a series of numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5SumSeries.html#Algorithm:-Sum-of-Harmonic-Series-(1-+-1/2-+-1/3-+-...-+-1/100)">Algorithm: Sum of Harmonic Series (1 + 1/2 + 1/3 + … + 1/100)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html">Sine Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Algorithm-to-Compute-sin(x)-Using-a-Series">Algorithm to Compute sin(x) Using a Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6Sine%20Series.html#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7TransformationCoordinate.html">Transformation of Coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Projectile.html">Projectile Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Projectile.html#Algorithm-for-Projectile-Motion-(Vectorized-Approach)">Algorithm for Projectile Motion (Vectorized Approach)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algorithm: Plot a Parametric Curve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Steps:"><strong>Steps:</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Flowchart">Flowchart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Lissajous.html">Lissajous Figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Lissajous.html#Algorithm-for-Generating-Lissajous-Figure">Algorithm for Generating Lissajous Figure</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">2nd Sem Skill Enhancement of Physics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Algorithm: Plot a Parametric Curve</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Notebook/9Plot.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<p>Make a plot of the curve which is defined by</p>
+<div class="math notranslate nohighlight">
+\[x = 2\cos \theta + \cos 2\theta\]</div>
+<div class="math notranslate nohighlight">
+\[y = 2\sin \theta - \sin 2\theta\]</div>
+<p>Where <span class="math notranslate nohighlight">\(0 \ge \theta \le 2\pi\)</span> . Take a set of values of <span class="math notranslate nohighlight">\(\theta\)</span> between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\pi\)</span>, calculate <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each from the equations above, and then, plot <span class="math notranslate nohighlight">\(y\)</span> as a function <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<section id="Algorithm:-Plot-a-Parametric-Curve">
+<h1>Algorithm: Plot a Parametric Curve<a class="headerlink" href="#Algorithm:-Plot-a-Parametric-Curve" title="Link to this heading"></a></h1>
+<section id="Steps:">
+<h2><strong>Steps:</strong><a class="headerlink" href="#Steps:" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Define the Range for θ</strong></p>
+<ul class="simple">
+<li><p>Generate 100 values for ( <span class="math">\theta `) from 0 to ( 2:nbsphinx-math:</span>pi <cite>) using ``numpy.linspace`</cite>.</p></li>
+</ul>
+</li>
+<li><p><strong>Compute the x and y Coordinates</strong></p>
+<ul class="simple">
+<li><p>Use the given parametric equations: [ x = 2 <span class="math">\cos `:nbsphinx-math:</span>theta <cite>+ :nbsphinx-math:</cite>cos 2`:nbsphinx-math:<cite>theta `] [ y = 2 :nbsphinx-math:</cite>sin <cite>:nbsphinx-math:</cite>theta <cite>- :nbsphinx-math:</cite>sin 2`:nbsphinx-math:<a href="#id1"><span class="problematic" id="id2">`</span></a>theta <a href="#id3"><span class="problematic" id="id4">`</span></a>]</p></li>
+<li><p>Compute the values for ( x ) and ( y ) using <code class="docutils literal notranslate"><span class="pre">numpy.cos()</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy.sin()</span></code> functions.</p></li>
+</ul>
+</li>
+<li><p><strong>Plot the Curve</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> to plot ( y ) as a function of ( x ).</p></li>
+<li><p>Set the color of the curve to red and use a dashed linestyle.</p></li>
+</ul>
+</li>
+<li><p><strong>Label the Axes</strong></p>
+<ul class="simple">
+<li><p>Set the x-axis label to “x” and the y-axis label to “y” with a font size of 12.</p></li>
+</ul>
+</li>
+<li><p><strong>Set the Title</strong></p>
+<ul class="simple">
+<li><p>Add the title “Plot of y as a function of x” with a font size of 16.</p></li>
+</ul>
+</li>
+<li><p><strong>Display the Plot</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> to render the plot.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="Flowchart">
+<h1>Flowchart<a class="headerlink" href="#Flowchart" title="Link to this heading"></a></h1>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart TD;
+    A[Start] --&gt; B[Generate theta values using linspace];
+    B --&gt; C[Compute x = 2 * costheta + cos2 * theta];
+    C --&gt; D[Compute y = 2 * sin theta + sin 2 * theta];
+    D --&gt; E[Plot x vs y with red dashed line];
+    E --&gt; F[Set x-axis label];
+    F --&gt; G[Set y-axis label];
+    G --&gt; H[Set plot title];
+    H --&gt; I[Display the plot];
+    I --&gt; J[End];
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Plot of y as a function x&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Notebook_9Plot_5_0.png" src="../_images/Notebook_9Plot_5_0.png" />
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="8Projectile.html" class="btn btn-neutral float-left" title="Projectile Motion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="10_Lissajous.html" class="btn btn-neutral float-right" title="Lissajous Figure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dr. Subir Sarkar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
